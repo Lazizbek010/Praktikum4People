@@ -60,7 +60,7 @@ main {
 }
 
 .container {
-    max-width: 1170px;
+    max-width: 1180px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -322,6 +322,7 @@ main {
     .container {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__list {
@@ -991,18 +992,18 @@ main {
         }
 
         .member-item-wrap {
-            margin-top: 10px;
 
             .member-name-custom {
+                margin-top: 10px;
                 font-size: 22px;
                 padding: 7px 20px 7px 40px;
-                color: #fff;
                 font-weight: 700;
                 cursor: pointer;
                 background-color: #fff;
                 color: #044f7c;
                 position: relative;
-                transition: .3s;
+                transition:all .3s;
+
                 &.active,
                 &:hover {
                     background: #00a0dd;
@@ -1013,18 +1014,24 @@ main {
             .member-item {
                 display: flex;
                 flex-direction: column;
-                padding-bottom: 30px;
-                padding-top: 30px;
                 padding-left: 40px;
                 transition: .5s;
+                max-height: 0;
+                transition: all .3s linear;
+                overflow: hidden;
+                visibility: hidden;
+
                 &.accordion {
                     transition: .5s;
-                    display: none;
+                    max-height: 100vh;
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                    visibility: visible;
                 }
 
                 p {
                     font-size: 14px;
-                    color:#044f7c;
+                    color: #044f7c;
                 }
             }
         }

@@ -27,13 +27,17 @@ function toggleModal() {
 // EVENTS
 // FAQ LIST ACCORDION
 
-memberNameCustom.forEach((li, i)=>{
-    li.addEventListener('click', (e)=>{
-        memberItem.forEach((pi, j)=>{
-            pi.classList.add('accordion')
-            if(i === j){
-                pi.classList.toggle('accordion')
-            }
-        })
-    })
-})
+memberNameCustom.forEach((li, i) => {
+  li.addEventListener("click", (e) => {
+    memberItem.forEach((pi, j) => {
+      if (i === j) {
+        pi.classList.toggle("accordion");
+        li.classList.add("active");
+        console.log(li);
+      } else if (i !== j) {
+        pi.classList.remove("accordion");
+        li.classList.remove("active");
+      }
+    });
+  });
+});
