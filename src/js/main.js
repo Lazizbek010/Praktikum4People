@@ -12,3 +12,8 @@ bars.addEventListener('click',()=>{
   bars.classList.toggle('change')
   navList.classList.toggle('openResNav')
 })
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
+  document.querySelector('.loading').style.display = 'none'
+});
