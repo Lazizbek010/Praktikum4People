@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum4People</title>
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- SWIPER SLIDER-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- SWIPER CSS -->
@@ -20,7 +22,7 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="https://www.praktikum4people.com/">
+                    <a href="../../index.html">
                         <img src="../images/main-logo.png" alt="logo" width="157" height="54">
                     </a>
                 </div>
@@ -44,7 +46,7 @@
                         <a href="./downloads.html">DOWNLOADS</a>
                     </li>
                     <li>
-                        <a class="active" href="#">FAQ</a>
+                        <a class="active" href="./partners.html">FAQ</a>
                     </li>
                     <li class="lang">
                         <a href="">DE</a>
@@ -52,6 +54,11 @@
                         <a href="" class="active">EN</a>
                     </li>
                 </ul>
+                <div class="bars">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
             </div>
         </nav>
         <section class="banner">
@@ -73,7 +80,7 @@
 
     <main>
         <section class="team-members partners">
-            <div class="container">
+            <div class="container" data-aos="zoom-in" data-aos-duration="1200" data-aos-easing="ease-in-back">
                 <div class="inline-header-breadcrumb sub-menu-2">
                     <a href="../../index.html">Home </a>
                     /
@@ -194,7 +201,7 @@
                     </div>
                 </div>
                 <div class="member-item-wrap">
-                <p class="member-name member-name-custom">What are the language requirements for the programs?</p>
+                    <p class="member-name member-name-custom">What are the language requirements for the programs?</p>
                     <div class="member-item member-item-custom">
                         <p>The language requirements vary depending on the individual program.
                             For internship and holiday work in a hotel you have to speak German at level A2-B1.
@@ -209,7 +216,7 @@
             </div>
         </section>
 
-        <section class="contactus">
+        <section class="contactus" data-aos="flip-up" data-aos-duration="1000">
             <p class="contactus__text">
                 contact us
                 <span></span><span></span><span></span><span></span>
@@ -278,7 +285,7 @@
                                 <a href="./downloads.html">Downloads</a>
                             </li>
                             <li>
-                                <a href="#">FAQ</a>
+                                <a href="./partners.html">FAQ</a>
                             </li>
                         </ul>
                     </div>
@@ -319,7 +326,7 @@
         <div class="footer">
             <div class="container">
                 <div class="footer__logo">
-                    <a href="https://www.praktikum4people.com/">
+                    <a href="../../index.html">
                         <img src="../images/main-logo.png" alt="footer-logo" width="157" height="54">
                     </a>
                 </div>
@@ -329,7 +336,11 @@
                 <ul class="footer__satsial">
                     <li>
                         <a href="https://www.facebook.com/Praktikum4People/?modal=admin_todo_tour">
-                            <img src="../images/facebook.png" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20"
+                                fill="#044f7c;">
+                                <path
+                                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                            </svg>
                         </a>
                     </li>
                     <li>
@@ -350,19 +361,28 @@
                     </li>
                     <li>
                         <a href="https://t.me/Praktikum4People">
-                            <img src="../images/tel.png" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 496 512">
+                                <path
+                                    d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z" />
+                            </svg>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
-
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- SWIPER SLIDER-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/swiper.js"></script>
     <!-- JS -->
     <script src="../js/main.js"></script>
+    <script src="../js/faq-list.js"></script>
+    <script src="../js/contact-form.js"></script>
 </body>
 
 </html>
