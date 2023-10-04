@@ -65,7 +65,8 @@ body {
 main {
     flex-grow: 1;
 }
-.loading{
+
+.loading {
     position: fixed;
     z-index: 7000;
     top: 0;
@@ -77,20 +78,29 @@ main {
     align-items: center;
     background: rgba(0, 0, 0, 0.7);
 }
+
 .loader {
     z-index: 7001;
-    border: 10px solid #f3f3f3; /* Light grey */
-    border-top: 10px solid #3498db; /* Blue */
+    border: 10px solid #f3f3f3;
+    /* Light grey */
+    border-top: 10px solid #3498db;
+    /* Blue */
     border-radius: 50%;
     width: 80px;
     height: 80px;
     animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .container {
     max-width: 1180px;
     margin: 0 auto;
@@ -254,7 +264,10 @@ main {
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-
+        @include media(700px){
+            right: 15px !important;
+            top: 20px !important;
+        }
         &:hover {
             cursor: pointer;
 
@@ -281,12 +294,22 @@ main {
         transition-delay: 0.141s;
         transition-timing-function: cubic-bezier(0.52, 0.02, 0.19, 1.02);
 
+        @include media(700px) {
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            transform: translate(0%, 0%);
+            padding: 64px 15px;
+            overflow-y: auto;
+        }
+
         .modal-feedback-title {
             text-transform: uppercase;
             font-size: 24px;
             color: #00a0dd;
             font-weight: 300;
-            text-align: start;
+            text-align: center;
         }
 
         .modal-feedback-desc {
@@ -810,6 +833,7 @@ main {
             font-size: 15px;
             font-weight: 400;
             transition: 0.5s;
+
             &:hover {
                 color: #fff;
             }
@@ -1549,7 +1573,8 @@ main {
         border: 1px solid #00a0dd;
         border-radius: 20px;
         transition: 0.5s;
-        &:hover{
+
+        &:hover {
             transform: scale(1.05, 1.05);
             box-shadow: 0 0 10px 1px #00a0dd;
         }
