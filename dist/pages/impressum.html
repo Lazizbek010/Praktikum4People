@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum4People</title>
-    <!-- AOS ANIMATION -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <!-- AOS ANIMATION -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- SWIPER SLIDER-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="./src/css/swiper.min.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="./src/css/main.min.css">
+    <link rel="stylesheet" href="../css/main.min.css">
 </head>
 
 <body>
@@ -24,31 +24,31 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="./index.html">
-                        <img src="./src/images/main-logo.png" alt="logo" width="157" height="54">
+                    <a href="../index.html">
+                        <img src="../images/main-logo.png" alt="logo" width="157" height="54">
                     </a>
                 </div>
                 <ul class="nav__list">
                     <li>
-                        <a class="active" href="./index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li>
-                        <a href="./src/pages/for-employers.html">For Employers</a>
+                        <a href="./for-employers.html">For Employers</a>
                     </li>
                     <li>
-                        <a href="./src/pages/for-applicants.html">For Applicants</a>
+                        <a href="./for-applicants.html">For Applicants</a>
                     </li>
                     <li>
-                        <a href="./src/pages/about.html">About us</a>
+                        <a href="./about.html">About us</a>
                     </li>
                     <li>
-                        <a href="./src/pages/contacts.html">Contact</a>
+                        <a href="./contacts.html">Contact</a>
                     </li>
                     <li>
-                        <a href="./src/pages/downloads.html">DOWNLOADS</a>
+                        <a href="./downloads.html">DOWNLOADS</a>
                     </li>
                     <li>
-                        <a href="./src/pages/partners.html">FAQ</a>
+                        <a href="./partners.html">FAQ</a>
                     </li>
                     <li class="lang">
                         <a href="">DE</a>
@@ -63,32 +63,26 @@
                 </div>
             </div>
         </nav>
-        <section class="banner">
+        <section class="banner data-production-banner">
             <!-- Slider main container -->
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="./public/img/img1.webp" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./public/img/img2.webp" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./public/img/img3.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./public/img/img4.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./public/img/img5.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./public/img/img6.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./public/img/img7.jpg" alt="">
+                    <div class="swiper-slide data-production-banner__slider">
+                        <img src="../images/contact-img.jpg" alt="">
+                        <div class="data-production-banner__info">
+                            <div class="container">
+                                <div class="inline-header-title">
+                                    IMPRINT
+                                </div>
+                                <div class="inline-header-breadcrumb">
+                                    <a href="../index.html">Home</a>
+                                    /
+                                    <span> IMPRINT</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     ...
                 </div>
@@ -99,85 +93,79 @@
     </header>
 
     <main>
-        <section class="practicum-main">
+        <section class="data-production-main">
             <div class="container">
-                <div class="prac-main">
-                    <h1 class="title">WHAT WE DO </h1>
-                    <div class="prac-main__content">
-                        <div class="prac-main__item" data-aos="fade-up" data-aos-duration="700">
-                            <div class="prac-main-people">
-                                <a href="./src/pages/for-employers.html">
-                                    <div class="prac-main__card">
-                                        <div class="img">
-                                            <img src="./public/img/prac-main-img1.jpg" alt="">
-                                        </div>
-                                        <h2 class="desc">FOR EMPLOYERS</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="prac-main__item" data-aos="fade-down" data-aos-duration="700">
-                            <div class="prac-main-people">
-                                <a href="./src/pages/for-applicants.html">
-                                    <div class="prac-main__card">
-                                        <div class="img">
-                                            <img src="./public/img/prac-main-img2.jpg" alt="">
-                                        </div>
-                                        <h2 class="desc">FOR APPLICANTS</h2>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="aktuell">
-                    <h1 class="title">News</h1>
-                    <div class="aktuell__content">
-                        <div class="aktuell__content-item" data-aos="fade-up" data-aos-duration="700">
-                            <div class="aktuell-left-element">
-                                <div class="aktuell-left-element-txt">
-                                    <div class="time">10.09.2022</div>
-                                    <div class="aktuell-left-element-title">Advanced Training </div>
-                                    <div class="aktuell-left-element-text">work opportunities...</div>
-                                    <div class="aktuell-left-element-link">
-                                        <a href="./src/pages/news.html" class="view-btn">
-                                            view
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="aktuell-left-element-img">
-                                    <img src="./public/img/aktuell-left-element-img.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="aktuell__content-item" data-aos="fade-down" data-aos-duration="700">
-                            <div class="aktuell-right-element-txt">
-                                <div class="aktuell-right-element-link">
-                                    <div class="time">10.09.2022</div>
-                                    <a href="./src/pages/news.html" class="view-btn">
-                                        view
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </a>
-                                </div>
-                                <p class="aktuell-right-element-title">
-                                    Important Information
-                                </p>
-                                <div class="aktuell-left-element-text-wrap-item">
-                                    <p>Dear Students, please pay attention... </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="data-production-main__content" data-aos="fade-up" data-aos-anchor-placement="top-bottom"  data-aos-duration="700">
+                    <p><strong>Imprint</strong></p>
+                    <p>Information under § 5 TMG</p>
+                    <p>Praktikum4People UG (haftungsbeschränkt)</p>
+                    <p>Hanfweg 4</p>
+                    <p>85302 Gerolsbach</p>
+                    <p>Germany</p>
+                    <p>Commercial Register: HRB 8840 Register-Court: Ingolstadt</p>
+                    <p><strong>Vat</strong></p>
+                    <p>VAT identification number in accordance with Section 27 (a) VAT Act:</p>
+                    <p>DE 124/135/42276</p>
+                    <p><strong>Proof of photos</strong></p>
+                    <p>All images are the property of Praktikum4People and may not be used for any other purpose.</p>
+                    <p class="source">
+                        <strong>Source:</strong>
+                    E-Recht24
+                    <a href="http://www.e-recht24.de/">www.e-recht24.de</a>
+                    </p>
+                    </p>
                 </div>
             </div>
         </section>
+
+        <section class="contactus">
+            <p class="contactus__text">
+                contact us
+                <span></span><span></span><span></span><span></span>
+            </p>
+            <div class="overlay hidden"></div>
+            <div class="sweet-modal">
+                <div class="sweet-modal-content hidden">
+                    <div class="sweet-modal-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                fill="%23292c34" />
+                        </svg>
+                    </div>
+                    <h2 class="modal-feedback-title">Kontakt-formular </h2>
+                    <p class="modal-feedback-desc">Bitte füllen Sie dieses Formular aus, damit wir mit Ihnen Kontakt
+                        aufnehmen
+                        können</p>
+                    <form class='feedback' action="#">
+                        <div class="modal-feedback-form-group">
+                            <label for="company">Unternehmen</label>
+                            <input type="text" name="company">
+                        </div>
+                        <div class="modal-feedback-form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="modal-feedback-form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="modal-feedback-form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="text" name="phone">
+                        </div>
+                        <div class="modal-feedback-form-group">
+                            <label for="comment">Text</label>
+                            <textarea name="comment"></textarea>
+                        </div>
+                        <div class="modal-feedback-batton">
+                            <button class="btn-hexagon" type="submit">absenden</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -187,26 +175,26 @@
                     <div class="footer-top__item">
                         <ul class="footer-top-list">
                             <li>
-                                <a href="./src/pages/for-employers.html">For Employers</a>
+                                <a href="./for-employers.html">For Employers</a>
                             </li>
                             <li>
-                                <a href="./src/pages/for-applicants.html">For Applicants</a>
+                                <a href="./for-applicants.html">For Applicants</a>
                             </li>
                             <li>
-                                <a href="./src/pages/about.html">About us</a>
+                                <a href="./about.html">About us</a>
                             </li>
                             <li>
-                                <a href="./src/pages/downloads.html">Downloads</a>
+                                <a href="./downloads.html">Downloads</a>
                             </li>
                             <li>
-                                <a href="./src/pages/partners.html">FAQ</a>
+                                <a href="./partners.html">FAQ</a>
                             </li>
                         </ul>
                     </div>
                     <div class="footer-top__item">
                         <ul class="footer-top-list">
-                            <li><a href="./src/pages/impressum.html">IMPRESSUM</a></li>
-                            <li><a href="./src/pages/data-protection.html">DATENSCHUTZ</a></li>
+                            <li><a href="./impressum.html">IMPRESSUM</a></li>
+                            <li><a href="./data-protection.html">DATENSCHUTZ</a></li>
                         </ul>
                     </div>
                     <div class="footer-top__item">
@@ -240,14 +228,14 @@
         <div class="footer">
             <div class="container">
                 <div class="footer__logo">
-                    <a href="https://www.praktikum4people.com/">
-                        <img src="./src/images/main-logo.png" alt="footer-logo" width="157" height="54">
+                    <a href="../index.html">
+                        <img src="../images/main-logo.png" alt="footer-logo" width="157" height="54">
                     </a>
                 </div>
                 <div class="footer__sosgroup">
                     <p>© Copyright 2018 - Web developed by <a href="https://sos.uz/">SOS Group</a></p>
                 </div>
-                <ul class="footer__satsial">
+                <ul class="footer__satsial impressum-footer-icon-border">
                     <li>
                         <a href="https://www.facebook.com/Praktikum4People/?modal=admin_todo_tour">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20"
@@ -285,17 +273,17 @@
             </div>
         </div>
     </footer>
-
-    <!-- AOS ANIMATION -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+<!-- AOS ANIMATION -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
     <!-- SWIPER SLIDER-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="./src/js/swiper.js"></script>
+    <script src="../js/swiper.js"></script>
     <!-- JS -->
-    <script src="./src/js/main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/contact-form.js"></script>
 </body>
 
 </html>

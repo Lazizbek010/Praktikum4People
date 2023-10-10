@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum4People</title>
-     <!-- AOS ANIMATION -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- SWIPER SLIDER-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- SWIPER CSS -->
@@ -24,13 +24,13 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="../../index.html">
+                    <a href="../index.html">
                         <img src="../images/main-logo.png" alt="logo" width="157" height="54">
                     </a>
                 </div>
                 <ul class="nav__list">
                     <li>
-                        <a href="../../index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li>
                         <a href="./for-employers.html">For Employers</a>
@@ -39,7 +39,7 @@
                         <a href="./for-applicants.html">For Applicants</a>
                     </li>
                     <li>
-                        <a href="./about.html">About us</a>
+                        <a class="active" href="./about.html">About us</a>
                     </li>
                     <li>
                         <a href="./contacts.html">Contact</a>
@@ -63,26 +63,14 @@
                 </div>
             </div>
         </nav>
-        <section class="banner data-production-banner">
+        <section class="banner">
             <!-- Slider main container -->
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide data-production-banner__slider">
-                        <img src="../../public/img/contact-img.jpg" alt="">
-                        <div class="data-production-banner__info">
-                            <div class="container">
-                                <div class="inline-header-title">
-                                    IMPRINT
-                                </div>
-                                <div class="inline-header-breadcrumb">
-                                    <a href="../../index.html">Home</a>
-                                    /
-                                    <span> IMPRINT</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="swiper-slide">
+                        <img src="../images/img5.jpg" alt="">
                     </div>
                     ...
                 </div>
@@ -93,31 +81,71 @@
     </header>
 
     <main>
-        <section class="data-production-main">
+        <section class="team-members">
             <div class="container">
-                <div class="data-production-main__content" data-aos="fade-up" data-aos-anchor-placement="top-bottom"  data-aos-duration="700">
-                    <p><strong>Imprint</strong></p>
-                    <p>Information under § 5 TMG</p>
-                    <p>Praktikum4People UG (haftungsbeschränkt)</p>
-                    <p>Hanfweg 4</p>
-                    <p>85302 Gerolsbach</p>
-                    <p>Germany</p>
-                    <p>Commercial Register: HRB 8840 Register-Court: Ingolstadt</p>
-                    <p><strong>Vat</strong></p>
-                    <p>VAT identification number in accordance with Section 27 (a) VAT Act:</p>
-                    <p>DE 124/135/42276</p>
-                    <p><strong>Proof of photos</strong></p>
-                    <p>All images are the property of Praktikum4People and may not be used for any other purpose.</p>
-                    <p class="source">
-                        <strong>Source:</strong>
-                    E-Recht24
-                    <a href="http://www.e-recht24.de/">www.e-recht24.de</a>
-                    </p>
-                    </p>
+                <div class="vnutreny-banner-baton-element" data-aos="flip-down" data-aos-duration="1200" data-aos-easing="ease-in-back">
+                    <h1 class="title">ABOUT US</h1>
+                    <div class="container team-members__txt">
+                        <p><strong>Our company</strong> was founded in 2018 in the district of Pfaffenhofen, Bavaria,
+                            with
+                            the aim of counteracting the labour shortage in Germany, especially in agriculture and in
+                            the
+                            hotel / restaurant business, and to contribute to intercultural understanding. In the
+                            following
+                            years, we have expanded our portfolio and are also active in other areas.</p>
+
+                        <p><strong>We are </strong>an international team and have numerous contacts to German companies
+                            and
+                            authorities as well as foreign partners. We are well networked and</p>
+
+                        <p>focus on cooperation with universities and associations from countries in Eastern Europe,
+                            Central
+                            Asia and Southeast Asia.</p>
+
+                        <p><strong>Our customers</strong> benefit from our experience, our know-how, our professional
+                            and
+                            personal support and above all through uncomplicated and friendly accessibility - 7 days a
+                            week.
+                        </p>
+
+                        <p><strong>Our conditions</strong> are fair, transparent, and adjusted to the respective work
+                            effort
+                            we do.</p>
+                        </p>
+                    </div>
+                    <div class="team-members__member-item">
+                        <div class="img">
+                            <img src="../images/team-member1.jpg" alt="">
+                        </div>
+                        <div class="member-desc">
+                            <span class="member-name">Heike WIETHOP</span>
+                            <span class="member-role">Project Manager and CEO</span>
+                            <div class="member-info">
+                                <p>Diploma in Business Administration Hotel Management, Hotel Master, international work
+                                    experience in London, New York, California in the upscale hotels business, member of
+                                    the board of examiners in the chamber of commerce and industry, long term project
+                                    coordination with leadership experience in a Bavarian educational institute.
+                                </p>
+                            </div>
+                            <a href="#" class="member-desc__contact">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                    <path
+                                        d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                                </svg>
+                                wiethop@praktikum4people.com
+                            </a>
+                            <a href="#" class="member-desc__contact">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                                    <path
+                                        d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+                                </svg>
+                                08445 9298270
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
         <section class="contactus">
             <p class="contactus__text">
                 contact us
@@ -228,14 +256,14 @@
         <div class="footer">
             <div class="container">
                 <div class="footer__logo">
-                    <a href="../../index.html">
+                    <a href="../index.html">
                         <img src="../images/main-logo.png" alt="footer-logo" width="157" height="54">
                     </a>
                 </div>
                 <div class="footer__sosgroup">
                     <p>© Copyright 2018 - Web developed by <a href="https://sos.uz/">SOS Group</a></p>
                 </div>
-                <ul class="footer__satsial impressum-footer-icon-border">
+                <ul class="footer__satsial">
                     <li>
                         <a href="https://www.facebook.com/Praktikum4People/?modal=admin_todo_tour">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="20" height="20"
@@ -243,7 +271,6 @@
                                 <path
                                     d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
                             </svg>
-                        </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/praktikum4people/">
@@ -273,11 +300,11 @@
             </div>
         </div>
     </footer>
-<!-- AOS ANIMATION -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- SWIPER SLIDER-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/swiper.js"></script>

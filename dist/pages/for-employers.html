@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktikum4People</title>
-     <!-- AOS ANIMATION -->
-     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS ANIMATION -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- SWIPER SLIDER-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <!-- SWIPER CSS -->
@@ -24,16 +24,16 @@
         <nav class="nav">
             <div class="container">
                 <div class="logo">
-                    <a href="../../index.html">
+                    <a href="https://www.praktikum4people.com/">
                         <img src="../images/main-logo.png" alt="logo" width="157" height="54">
                     </a>
                 </div>
                 <ul class="nav__list">
                     <li>
-                        <a href="../../index.html">Home</a>
+                        <a href="../index.html">Home</a>
                     </li>
                     <li>
-                        <a href="./for-employers.html">For Employers</a>
+                        <a class="active" href="#">For Employers</a>
                     </li>
                     <li>
                         <a href="./for-applicants.html">For Applicants</a>
@@ -42,7 +42,7 @@
                         <a href="./about.html">About us</a>
                     </li>
                     <li>
-                        <a class="active" href="./contacts.html">Contact</a>
+                        <a href="./contacts.html">Contact</a>
                     </li>
                     <li>
                         <a href="./downloads.html">DOWNLOADS</a>
@@ -70,8 +70,27 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <img src="../../public/img/contact-img.jpg" alt="">
+                        <img src="../images/img1.webp" alt="">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="../images/img2.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/img3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/img4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/img5.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/img6.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/img7.jpg" alt="">
+                    </div>
+                    ...
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -80,65 +99,123 @@
     </header>
 
     <main>
-        <section class="contact">
-            <div class="container" data-aos="flip-right" data-aos-duration="1200" data-aos-easing="ease-in-back">
-                <div class="contact__left">
-                    <div class="info">
-                        <h4>Address:</h4>
-                        <p>Hanfweg 4, 85302 Gerolsbach, Germany
-                        </p>
-                    </div>
-                    <div class="info">
-                        <h4>Phone:</h4>
-                        <a href="#">0049 (0)8445 9298270</a>
-                        <a href="#">0049 (0)8445 9298271</a>
-                    </div>
-                    <div class="info">
-                        <h4>Email:</h4>
-                        <a href="#">info@praktikum4people.com</a>
+        <section class="vnutreny-banner-baton">
+            <div class="container">
+                <div class="vnutreny-banner-baton-element">
+                    <h1 class="title">OUR PROGRAMS FOR EMPLOYERS</h1>
+                    <div class="content">
+                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="100">
+                            <a href="./products.html">
+                                <div class="content__card card">
+                                    <div class="img">
+                                        <img src="../images/our-prog-1.jpg" alt="">
+                                    </div>
+                                    <h3 class="desc">INTERNSHIP</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="200">
+                            <a href="./products.html">
+                                <div class="content__card">
+                                    <div class="img">
+                                        <img src="../images/our-prog-2.jpg" alt="">
+                                    </div>
+                                    <h3 class="desc">HOLIDAY WORK</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="300">
+                            <a href="./products.html">
+                                <div class="content__card">
+                                    <div class="img">
+                                        <img src="../images/our-prog-3.webp" alt="">
+                                    </div>
+                                    <h3 class="desc">APPRENTICESHIP </h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
+                            <a href="./products.html">
+                                <div class="content__card">
+                                    <div class="img">
+                                        <img src="../images/our-prog-4.jpg" alt="">
+                                    </div>
+                                    <h3 class="desc">SKILLED LABOUR </h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                            <a href="./products.html">
+                                <div class="content__card">
+                                    <div class="img">
+                                        <img src="../images/our-prog-5.jpg" alt="">
+                                    </div>
+                                    <h3 class="desc">Advanced Training</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content__item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
+                            <a href="./products.html">
+                                <div class="content__card">
+                                    <div class="img">
+                                        <img src="../images/our-prog-6.jpg" alt="">
+                                    </div>
+                                    <h3 class="desc">VOLUNTARY SOCIAL YEAR </h3>
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="contact__right">
-                    <form action="" class="contact-form">
-                        <div class="contact-form__item">
-                            <label for="name">Name</label>
-                            <div class="input">
-                                <input type="text">
-                            </div>
+            </div>
+        </section>
+        <section class="contactus">
+            <p class="contactus__text">
+                contact us
+                <span></span><span></span><span></span><span></span>
+            </p>
+            <div class="overlay hidden"></div>
+            <div class="sweet-modal">
+                <div class="sweet-modal-content hidden">
+                    <div class="sweet-modal-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                                fill="%23292c34" />
+                        </svg>
+                    </div>
+                    <h2 class="modal-feedback-title">Kontakt-formular </h2>
+                    <p class="modal-feedback-desc">Bitte füllen Sie dieses Formular aus, damit wir mit Ihnen Kontakt
+                        aufnehmen
+                        können</p>
+                    <form class='feedback' action="#">
+                        <div class="modal-feedback-form-group">
+                            <label for="company">Unternehmen</label>
+                            <input type="text" name="company">
                         </div>
-                        <div class="contact-form__item">
-                            <label for="email">Email</label>
-                            <div class="input">
-                                <input type="text">
-                            </div>
+                        <div class="modal-feedback-form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" name="name">
                         </div>
-                        <div class="contact-form__item">
-                            <label for="company">Company</label>
-                            <div class="input">
-                                <input type="text">
-                            </div>
+                        <div class="modal-feedback-form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" name="email">
                         </div>
-                        <div class="contact-form__item">
-                            <label for="phone">Phone</label>
-                            <div class="input">
-                                <input type="text">
-                            </div>
+                        <div class="modal-feedback-form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="text" name="phone">
                         </div>
-                        <div class="contact-form__item contact-form__textarea">
-                            <div class="input">
-                                <textarea name="" id=""  rows="7" placeholder="Enter message here"></textarea>
-                            </div>
+                        <div class="modal-feedback-form-group">
+                            <label for="comment">Text</label>
+                            <textarea name="comment"></textarea>
                         </div>
-                        <div class="contact-form__btn">
-                            <button class="view-btn">
-                                Send message
-                                <span></span><span></span><span></span><span></span>
-                            </button>
+                        <div class="modal-feedback-batton">
+                            <button class="btn-hexagon" type="submit">absenden</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -148,7 +225,7 @@
                     <div class="footer-top__item">
                         <ul class="footer-top-list">
                             <li>
-                                <a href="./for-employers.html">For Employers</a>
+                                <a href="#">For Employers</a>
                             </li>
                             <li>
                                 <a href="./for-applicants.html">For Applicants</a>
@@ -201,7 +278,7 @@
         <div class="footer">
             <div class="container">
                 <div class="footer__logo">
-                    <a href="../../index.html">
+                    <a href="https://www.praktikum4people.com/">
                         <img src="../images/main-logo.png" alt="footer-logo" width="157" height="54">
                     </a>
                 </div>
@@ -246,16 +323,17 @@
             </div>
         </div>
     </footer>
-<!-- AOS ANIMATION -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- SWIPER SLIDER-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../js/swiper.js"></script>
     <!-- JS -->
     <script src="../js/main.js"></script>
+    <script src="../js/contact-form.js"></script>
 </body>
 
 </html>
