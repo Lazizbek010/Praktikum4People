@@ -1,8 +1,4 @@
-@mixin media($size) {
-    @media (max-width: $size) {
-        @content;
-    }
-}
+@import 'foundation/mixin';
 
 .swiper {
     width: 100%;

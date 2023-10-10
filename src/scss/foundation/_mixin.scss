@@ -1,0 +1,10 @@
+// MIXINS
+@mixin media($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin font-size($fs){
+    font-size: calc($fs / 16) + rem;
+}

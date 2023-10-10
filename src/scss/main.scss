@@ -1,37 +1,6 @@
-// FONTS
-@font-face {
-    font-family: "MuseoSansCyrl";
-    font-weight: 300;
-    src: url("../fonts/MuseoSansCyrl_0.otf");
-}
-
-/*regular*/
-@font-face {
-    font-family: "MuseoSansCyrl";
-    font-weight: 500;
-    src: url("../fonts/MuseoSansCyrl_1.otf");
-}
-
-/*semi bold*/
-@font-face {
-    font-family: "MuseoSansCyrl";
-    font-weight: 700;
-    src: url("../fonts/MuseoSansCyrl_2.otf");
-}
-
-/*bold*/
-// @font-face {
-//     font-family: "MuseoSansCyrl";
-//     font-weight: 900;
-//     src: url("../fonts/MuseoSansCyrl_3.otf");
-// }
-
-// MIXINS
-@mixin media($size) {
-    @media (max-width: $size) {
-        @content;
-    }
-}
+@import 'foundation/fonts';
+@import 'foundation/mixin';
+@import 'foundation/variables';
 
 // GLOBAL
 * {
@@ -45,18 +14,13 @@
     outline: none;
     font-weight: 500;
 }
-
-:root {
-    --white-clr: #fff;
-}
-
 html,
 body {
     height: 100%;
 }
 
 body {
-    color: #2d2d2d;
+    color: $text-color;
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -81,10 +45,8 @@ main {
 
 .loader {
     z-index: 7001;
-    border: 10px solid #f3f3f3;
-    /* Light grey */
-    border-top: 10px solid #3498db;
-    /* Blue */
+    border: 10px solid $border-light-grey;
+    border-top: 10px solid $border-blue;
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -114,13 +76,13 @@ main {
 
 .title {
     text-transform: uppercase;
-    color: #00a0dd;
+    color: $title-color;
     position: relative;
     padding-bottom: 32px;
     text-align: center;
 
     &::before {
-        background: #78a22f;
+        background: $title-secondary-clr;
         content: '';
         position: absolute;
         bottom: 0;
@@ -138,7 +100,7 @@ main {
         transform: translateX(-50%);
         width: 80px;
         height: 33px;
-        background: #fff;
+        background: $white-clr;
     }
 
     @include media(678px) {
@@ -152,9 +114,9 @@ main {
     position: relative;
     display: inline-block;
     padding-bottom: 8px;
-    font-size: 14px;
+    @include font-size(14);
     font-weight: 500;
-    color: #00a0dd;
+    color: $title-color;
 
     &::before {
         content: '';
@@ -163,7 +125,7 @@ main {
         right: 0;
         width: 80%;
         height: 2px;
-        background: #b6e0f0;
+        background: $bg-time-before;
     }
 
     &::after {
@@ -174,20 +136,20 @@ main {
         width: 4px;
         height: 4px;
         border-radius: 50%;
-        background: #b6e0f0;
+        background: $bg-time-before
     }
 }
 
 .view-btn {
     display: inline-block;
     padding: 9px 25px;
-    background: #00a0dd;
-    color: #fff;
+    background: $title-color;
+    color: $white-clr;
     text-transform: uppercase;
-    font-size: 14px;
+    @include font-size(14);
     font-weight: 500;
     position: relative;
-    border: 1px solid #00a0dd;
+    border: 1px solid $title-color;
     z-index: 1;
     overflow: hidden;
     transition: all .3s ease-in;
@@ -212,7 +174,7 @@ main {
         position: absolute;
         width: 25%;
         height: 100%;
-        background-color: #fff;
+        background-color: $white-clr;
         transform: translateY(150%);
         border-radius: 50%;
         left: calc((var(--n) - 1) * 25%);
@@ -222,7 +184,7 @@ main {
     }
 
     &:hover {
-        color: #00a0dd;
+        color: $title-color;
         cursor: pointer;
 
         span {
@@ -264,15 +226,17 @@ main {
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        @include media(700px){
+
+        @include media(700px) {
             right: 15px !important;
             top: 20px !important;
         }
+
         &:hover {
             cursor: pointer;
 
             svg {
-                fill: #fff;
+                fill: $white-clr;
             }
 
             background-color: #09c;
@@ -280,15 +244,16 @@ main {
     }
 
     &-content {
-        background: #fff;
+        background: $white-clr;
         position: fixed;
         width: 500px;
+        overflow-y: auto;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 64px 36px;
         text-align: center;
-        font-size: 16px;
+        @include font-size(16);
         transition-property: transform, -webkit-transform, opacity;
         transition-duration: 0.3s;
         transition-delay: 0.141s;
@@ -301,33 +266,32 @@ main {
             left: 0;
             transform: translate(0%, 0%);
             padding: 64px 15px;
-            overflow-y: auto;
         }
 
         .modal-feedback-title {
             text-transform: uppercase;
-            font-size: 24px;
-            color: #00a0dd;
+            @include font-size(24);
+            color: $title-color;
             font-weight: 300;
             text-align: center;
         }
 
         .modal-feedback-desc {
-            font-size: 15px;
+            @include font-size(15);
             text-align: start;
             font-weight: 300;
             margin-top: 20px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #78a22f;
+            border-bottom: 1px solid $title-secondary-clr;
         }
 
         .modal-feedback-form-group {
             margin-top: 16px;
 
             label {
-                font-size: 15px;
+                @include font-size(15);
                 font-weight: 500;
-                color: #00a0dd;
+                color: $title-color;
             }
 
             input,
@@ -335,7 +299,7 @@ main {
                 margin-top: 5px;
                 padding: 12px;
                 width: 100%;
-                border: 1px solid #000;
+                border: 1px solid $dark-color;
                 background: transparent;
             }
 
@@ -349,19 +313,19 @@ main {
 
             button {
                 width: 100%;
-                background: #00a0dd;
+                background: $title-color;
                 padding: 10px;
                 border: none;
                 text-transform: uppercase;
                 font-weight: 300;
-                font-size: 16px;
-                color: #fff;
-                border: 1px solid #00a0dd;
+                @include font-size(16);
+                color: $white-clr;
+                border: 1px solid $title-color;
                 cursor: pointer;
 
                 &:hover {
                     background: transparent;
-                    color: #00a0dd;
+                    color: $title-color;
                 }
             }
         }
@@ -374,7 +338,7 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--white-clr);
+    background: $white-clr;
     box-shadow: 0px 5px 22px -4px rgba(106, 107, 109, 0.6);
     height: 80px;
     display: flex;
@@ -410,27 +374,27 @@ main {
                     left: 0;
                     width: 4px;
                     height: 4px;
-                    background: #78a22f;
+                    background: $title-secondary-clr;
                     border-radius: 50%;
                 }
             }
 
             &:hover {
                 a {
-                    color: #78a22f;
-                    text-shadow: 3px 3px 3px #78a22f;
+                    color: $title-secondary-clr;
+                    text-shadow: 3px 3px 3px $title-secondary-clr;
                     ;
                 }
             }
         }
 
         a {
-            font-size: 15px;
+            @include font-size(15);
             text-transform: uppercase;
-            color: #00a0dd;
+            color: $title-color;
 
             &.active {
-                color: #78a22f;
+                color: $title-secondary-clr;
             }
         }
 
@@ -440,8 +404,8 @@ main {
             &__drop {
                 margin-left: 10px;
                 margin-right: 10px;
-                font-size: 16px;
-                color: #78a22f;
+                @include font-size(16);
+                color: $title-secondary-clr;
             }
         }
     }
@@ -455,7 +419,7 @@ main {
         .bar3 {
             width: 40px;
             height: 5px;
-            background-color: #78a22f;
+            background-color: $title-secondary-clr;
             margin: 6px 0;
             transition: 0.4s;
             border-radius: 6px;
@@ -487,7 +451,7 @@ main {
 
         &__list {
             a {
-                font-size: 13px;
+                @include font-size(13);
             }
         }
     }
@@ -515,7 +479,7 @@ main {
             transition: transform 0.3s ease-in;
 
             a {
-                font-size: 15px;
+                @include font-size(15);
             }
 
             li {
@@ -539,7 +503,7 @@ main {
 
 // MAIN ------------ HOME -------------
 .practicum-main {
-    background: #f0f0f0;
+    background: $bg-primary;
     padding-bottom: 70px;
 
     .prac-main {
@@ -547,7 +511,7 @@ main {
         padding-bottom: 70px;
         text-align: center;
         transform: translateY(-60px);
-        background: #fff;
+        background: $white-clr;
         position: relative;
         z-index: 2;
 
@@ -592,9 +556,9 @@ main {
                 margin-top: 15px;
                 font-weight: 500;
                 text-transform: uppercase;
-                color: #78a22f;
+                color: $title-secondary-clr;
                 padding-bottom: 18px;
-                font-size: 26px;
+                @include font-size(26);
             }
 
             &:hover {
@@ -633,7 +597,7 @@ main {
     .aktuell {
         .title {
             &::after {
-                background: #f0f0f0;
+                background: $bg-primary;
             }
         }
 
@@ -653,7 +617,7 @@ main {
                 display: flex;
                 justify-content: space-between;
                 overflow: hidden;
-                background: #fff;
+                background: $white-clr;
 
                 &-txt {
                     height: 500px;
@@ -664,10 +628,10 @@ main {
                 }
 
                 &-title {
-                    font-size: 24px;
+                    @include font-size(24);
                     text-transform: uppercase;
                     font-weight: 500;
-                    color: #78a22f;
+                    color: $title-secondary-clr;
                     margin-top: 25px;
                     margin-bottom: 8px;
                 }
@@ -695,7 +659,7 @@ main {
             .aktuell-right-element-txt {
                 padding: 10px 20px;
                 text-align: left;
-                background: #fff;
+                background: $white-clr;
                 height: 161px;
                 overflow: hidden;
             }
@@ -709,16 +673,16 @@ main {
 
             .aktuell-right-element-title {
                 margin-bottom: 8px;
-                font-size: 24px;
+                @include font-size(24);
                 text-transform: uppercase;
                 font-weight: 500;
-                color: #78a22f;
+                color: $title-secondary-clr;
             }
 
             .aktuell-left-element-text-wrap-item {
                 height: 40px;
                 overflow: hidden;
-                font-size: 14px;
+                @include font-size(14);
             }
         }
 
@@ -768,20 +732,20 @@ main {
 
 // FOOTER
 .footer-top {
-    background: #044f7c;
+    background: $member-text-clr;
     padding-top: 60px;
     padding-bottom: 60px;
 
     &-title {
-        font-size: 18px;
-        color: #00a0dd;
+        @include font-size(18);
+        color: $title-color;
     }
 
     &-right-element {
         margin-top: 22px;
 
         li {
-            color: #fff;
+            color: $white-clr;
             font-weight: 300;
 
             &:not(:first-child) {
@@ -791,20 +755,20 @@ main {
             span {
                 display: inline-block;
                 width: 60px;
-                font-size: 14px;
+                @include font-size(14);
                 font-weight: 700;
-                color: #00a0dd;
+                color: $title-color;
                 margin-right: 10px;
             }
 
             a {
-                font-size: 13px;
-                color: #fff;
+                @include font-size(13);
+                color: $white-clr;
                 font-weight: 300;
                 transition: .3s;
 
                 &:hover {
-                    color: #78a22f;
+                    color: $title-secondary-clr;
                     cursor: text;
                 }
             }
@@ -828,14 +792,14 @@ main {
         }
 
         a {
-            color: #00a0dd;
+            color: $title-color;
             text-transform: uppercase;
-            font-size: 15px;
+            @include font-size(15);
             font-weight: 400;
             transition: 0.5s;
 
             &:hover {
-                color: #fff;
+                color: $white-clr;
             }
         }
     }
@@ -867,7 +831,7 @@ main {
 .footer {
     padding-top: 20px;
     padding-bottom: 20px;
-    background: #fff;
+    background: $white-clr;
 
     .container {
         display: flex;
@@ -877,7 +841,7 @@ main {
 
     &__sosgroup {
         p {
-            font-size: 14px;
+            @include font-size(14);
         }
     }
 
@@ -891,7 +855,7 @@ main {
             a {
                 &:hover {
                     svg {
-                        fill: #78A22F;
+                        fill: $title-secondary-clr;
                     }
                 }
             }
@@ -925,7 +889,7 @@ main {
 
 // MAIN ------------ FOR EMPLOYERS -------------
 .vnutreny-banner-baton {
-    background-color: #f0f0f0;
+    background-color: $bg-primary;
     padding-bottom: 75px;
 
     &-element {
@@ -933,7 +897,7 @@ main {
         position: relative;
         margin-top: -65px;
         padding: 45px 20px 25px 20px;
-        background: #fff;
+        background: $white-clr;
         z-index: 2;
 
         .title {
@@ -979,10 +943,10 @@ main {
 
                 .desc {
                     text-align: center;
-                    color: #00a0dd;
+                    color: $title-color;
                     text-transform: uppercase;
                     padding-bottom: 18px;
-                    font-size: 18px;
+                    @include font-size(18);
                 }
             }
 
@@ -1006,7 +970,7 @@ main {
 
 .contactus {
     text-align: center;
-    background: #00a0dd;
+    background: $title-color;
     padding: 25px 0;
     display: flex;
     justify-content: center;
@@ -1016,13 +980,13 @@ main {
         text-transform: uppercase;
         padding: 16px 35px;
         width: 240px;
-        background: #fff;
-        border: 1px solid #fff;
-        color: #00a0dd;
+        background: $white-clr;
+        border: 1px solid $white-clr;
+        color: $title-color;
         font-weight: 500;
         text-align: center;
         display: inline-block;
-        font-size: 14px;
+        @include font-size(14);
         position: relative;
         z-index: 1;
         overflow: hidden;
@@ -1048,7 +1012,7 @@ main {
             position: absolute;
             width: 25%;
             height: 100%;
-            background-color: #00a0dd;
+            background-color: $title-color;
             transform: translateY(150%);
             border-radius: 50%;
             left: calc((var(--n) - 1) * 25%);
@@ -1058,7 +1022,7 @@ main {
         }
 
         &:hover {
-            color: #fff;
+            color: $white-clr;
 
             span {
                 transform: translateY(0) scale(3);
@@ -1085,14 +1049,14 @@ main {
 // MAIN ------------ ABOUT US -------------
 .team-members {
     padding: 50px 0;
-    background: #f0f0f0;
+    background: $bg-primary;
 
     .title {
         margin-bottom: 18px;
     }
 
     .vnutreny-banner-baton-element {
-        background-color: #fff;
+        background-color: $white-clr;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         padding-top: 20px;
         position: relative;
@@ -1103,7 +1067,7 @@ main {
 
     &__txt {
         p {
-            font-size: 15px;
+            @include font-size(15);
             line-height: 22px;
 
             strong {
@@ -1138,34 +1102,34 @@ main {
             align-items: flex-start;
 
             .member-name {
-                font-size: 22px;
-                color: #00a0dd;
+                @include font-size(22);
+                color: $title-color;
                 font-family: 'MuseoSansCyrl300', sans-serif;
                 font-weight: 700;
             }
 
             .member-role {
-                color: #78a22f;
+                color: $title-secondary-clr;
                 margin-bottom: 25px;
-                font-size: 15px;
+                @include font-size(15);
             }
 
             .member-info {
-                color: #044f7c;
-                font-size: 15px;
+                color: $member-text-clr;
+                @include font-size(15);
                 margin-bottom: 10px;
             }
 
             &__contact {
-                color: #044f7c;
+                color: $member-text-clr;
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
                 margin-bottom: 8px;
 
                 svg {
-                    fill: #78a22f;
-                    font-size: 18px;
+                    fill: $title-secondary-clr;
+                    @include font-size(18);
                     margin-right: 10px;
                 }
             }
@@ -1197,11 +1161,11 @@ main {
 
 // MAIN ------------ CONTACT -------------
 .contact {
-    background-color: #f0f0f0;
+    background-color: $bg-primary;
     padding: 60px 0;
 
     .container {
-        background-color: #fff;
+        background-color: $white-clr;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         position: relative;
         margin-top: -120px;
@@ -1229,14 +1193,14 @@ main {
 
         .info {
             h4 {
-                color: #00a0dd;
+                color: $title-color;
                 margin-bottom: 5px;
             }
 
             p,
             a {
-                color: #1b1e21;
-                font-size: 15px;
+                color: $darken2-clr;
+                @include font-size(15);
             }
         }
     }
@@ -1262,8 +1226,8 @@ main {
                 }
 
                 label {
-                    color: #00a0dd;
-                    font-size: 15px;
+                    color: $title-color;
+                    @include font-size(15);
                     margin-bottom: 7px;
                     display: block;
 
@@ -1305,10 +1269,10 @@ main {
 // MAIN ------------ PARTNERS -------------
 .partners {
     padding: 50px 0;
-    background: #f0f0f0;
+    background: $bg-primary;
 
     .container {
-        background-color: #fff;
+        background-color: $white-clr;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         padding: 30px 0;
         position: relative;
@@ -1320,14 +1284,14 @@ main {
             left: 0;
             top: -50px;
             padding: 10px;
-            background-color: #044f7c;
+            background-color: $member-text-clr;
 
             a {
-                color: #fff;
+                color: $white-clr;
             }
 
             span {
-                color: #35c7ff;
+                color: $span-clr;
             }
         }
 
@@ -1335,19 +1299,19 @@ main {
 
             .member-name-custom {
                 margin-top: 10px;
-                font-size: 22px;
+                @include font-size(22);
                 padding: 7px 20px 7px 40px;
                 font-weight: 700;
                 cursor: pointer;
-                background-color: #fff;
-                color: #044f7c;
+                background-color: $white-clr;
+                color: $member-text-clr;
                 position: relative;
                 transition: all .3s;
 
                 &.active,
                 &:hover {
-                    background: #00a0dd;
-                    color: #fff;
+                    background: $title-color;
+                    color: $white-clr;
                 }
             }
 
@@ -1370,8 +1334,8 @@ main {
                 }
 
                 p {
-                    font-size: 14px;
-                    color: #044f7c;
+                    @include font-size(14);
+                    color: $member-text-clr;
                 }
             }
         }
@@ -1393,7 +1357,7 @@ main {
 
             .member-item-wrap {
                 .member-name-custom {
-                    font-size: 18px;
+                    @include font-size(18);
                     padding: 7px 20px 7px 20px;
                 }
 
@@ -1407,11 +1371,11 @@ main {
 
 // MAIN ------------ DOWNLOADS -------------
 .downloads {
-    background-color: #f0f0f0;
+    background-color: $bg-primary;
     padding-bottom: 75px;
 
     .title {
-        font-size: 32px;
+        @include font-size(32);
     }
 
     .vnutreny-banner-baton-element {
@@ -1419,7 +1383,7 @@ main {
         position: relative;
         margin-top: -65px;
         padding: 45px 20px 25px 20px;
-        background: #fff;
+        background: $white-clr;
 
         @include media(475px) {
             padding: 45px 0px 25px 0px;
@@ -1433,18 +1397,18 @@ main {
         &__txt {
             word-break: break-word;
             padding: 25px;
-            border: 1px solid #00a0dd;
+            border: 1px solid $title-color;
 
             @include media(475px) {
                 padding: 25px 10px;
             }
 
             p {
-                font-size: 14px;
+                @include font-size(14);
             }
 
             &-item {
-                font-size: 14px;
+                @include font-size(14);
                 padding-bottom: 15px;
 
                 &:not(:last-child) {
@@ -1452,7 +1416,7 @@ main {
                 }
 
                 a {
-                    color: #00a0dd !important;
+                    color: $title-color !important;
                 }
             }
         }
@@ -1460,7 +1424,7 @@ main {
         .interesting-links {
             word-break: break-word;
             padding: 25px;
-            border: 1px solid #00a0dd;
+            border: 1px solid $title-color;
 
             &__link {
                 margin-bottom: 7px;
@@ -1475,7 +1439,7 @@ main {
                     }
 
                     a {
-                        font-size: 13px;
+                        @include font-size(13);
                     }
                 }
             }
@@ -1490,7 +1454,7 @@ main {
         position: relative;
         margin-top: -65px;
         padding: 45px 20px 25px 20px;
-        background: #fff;
+        background: $white-clr;
     }
 
     &__content {
@@ -1515,17 +1479,17 @@ main {
         width: 65%;
 
         &__title {
-            font-size: 24px;
+            @include font-size(24);
             text-transform: uppercase;
             font-weight: 500;
-            color: #78a22f;
+            color: $title-secondary-clr;
             margin-top: 25px;
             margin-bottom: 8px;
         }
 
         &__desc {
             margin-bottom: 8px;
-            font-size: 14px;
+            @include font-size(14);
         }
     }
 
@@ -1557,7 +1521,7 @@ main {
 .products {
     .vnutreny-banner-baton-element {
         position: relative;
-        background: #fff;
+        background: $white-clr;
         margin-top: -60px;
         padding: 45px 40px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -1570,18 +1534,18 @@ main {
     &__card {
         height: 100%;
         word-break: break-word;
-        border: 1px solid #00a0dd;
+        border: 1px solid $title-color;
         border-radius: 20px;
         transition: 0.5s;
 
         &:hover {
             transform: scale(1.05, 1.05);
-            box-shadow: 0 0 10px 1px #00a0dd;
+            box-shadow: 0 0 10px 1px $title-color;
         }
     }
 
     &__title {
-        background: #00a0dd;
+        background: $title-color;
         border-radius: 20px 20px 0 0;
         display: flex;
         align-items: center;
@@ -1590,7 +1554,7 @@ main {
 
         span {
             padding-bottom: 10px;
-            color: #fff;
+            color: $white-clr;
         }
     }
 
@@ -1598,7 +1562,7 @@ main {
         padding: 25px;
 
         li {
-            font-size: 14px;
+            @include font-size(14);
             line-height: 23px;
             list-style-type: disc;
         }
@@ -1648,22 +1612,22 @@ main {
             }
 
             .inline-header-title {
-                font-size: 28px;
+                @include font-size(28);
                 font-weight: 400;
                 line-height: 40px;
                 text-transform: uppercase;
-                color: #ffffff;
+                color: $white-clr;
             }
 
             .inline-header-breadcrumb {
                 text-transform: uppercase;
-                color: #ffffff;
-                font-size: 18px;
+                color: $white-clr;
+                @include font-size(18);
                 font-weight: 500;
 
                 a {
-                    color: #78a22f;
-                    font-size: 18px;
+                    color: $title-secondary-clr;
+                    @include font-size(18);
                     font-weight: 500;
                 }
             }
@@ -1675,13 +1639,13 @@ main {
     padding: 35px 0;
 
     &__content {
-        color: #044f7c;
+        color: $member-text-clr;
         display: flex;
         flex-direction: column;
 
         p {
             margin-bottom: 25px;
-            font-size: 15px;
+            @include font-size(15);
             line-height: 21px;
             font-weight: 400;
 
@@ -1695,7 +1659,7 @@ main {
             gap: 8px;
 
             a {
-                color: #044f7c;
+                color: $member-text-clr;
             }
         }
     }
@@ -1707,8 +1671,8 @@ main {
         a {
             padding: 6px 12px;
             line-height: 1.42857143;
-            background-color: #fff;
-            border: 1px solid #ddd;
+            background-color: $white-clr;
+            border: 1px solid $border-light2;
             border-top-right-radius: 4px;
             border-bottom-right-radius: 4px;
             display: flex;
@@ -1720,11 +1684,11 @@ main {
                 z-index: 2;
 
                 svg {
-                    fill: #78a22f;
+                    fill: $title-secondary-clr;
                 }
 
-                background-color: #eeeeee;
-                border-color: #ddd;
+                background-color: $bg-secondary;
+                border-color: $border-light2;
             }
         }
     }
